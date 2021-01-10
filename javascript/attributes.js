@@ -8,8 +8,9 @@ const multipleInstances = element => {
         `input[type="${element.type}"][name="${element.name}"]`
       ).length > 1
     )
+  } else {
+    return false
   }
-  return false
 }
 const collectCheckedOptions = element => {
   return Array.from(element.querySelectorAll('option:checked'))
