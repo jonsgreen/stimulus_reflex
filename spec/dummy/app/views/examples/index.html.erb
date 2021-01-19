@@ -1,0 +1,13 @@
+<div data-controller="example">
+  <%= label_tag :example %>
+  <%= text_field_tag :example, '', id: "example",
+    data: { reflex: "change->Example#lifecycles", "reflex-root": "#content" } %>
+  <%= button_tag :button %>
+  <%= label_tag :content %>
+  <div id="content">
+    <%= render "content", content: params[:content] %>
+  </div>
+  <%= label_tag :lifecycles %>
+  <div id="lifecycles" data-example-target="lifecycles">
+  </div>
+</div>

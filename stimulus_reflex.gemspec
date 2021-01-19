@@ -26,7 +26,7 @@ Gem::Specification.new do |gem|
   }
 
   gem.files = Dir["app/**/*", "lib/**/*", "bin/*", "[A-Z]*"]
-  gem.test_files = Dir["test/**/*.rb"]
+  gem.test_files = Dir["test/**/*.rb", "spec/**/*"]
 
   gem.add_dependency "rack"
   gem.add_dependency "nokogiri"
@@ -35,8 +35,16 @@ Gem::Specification.new do |gem|
   gem.add_dependency "cable_ready", ">= 4.4"
 
   gem.add_development_dependency "bundler", "~> 2.0"
+  gem.add_development_dependency "capybara"
+  #gem.add_development_dependency "database_cleaner"
+  gem.add_development_dependency "puma"
   gem.add_development_dependency "pry-nav"
   gem.add_development_dependency "pry"
   gem.add_development_dependency "rake"
+  gem.add_development_dependency 'rspec-rails'
+  gem.add_development_dependency 'selenium-webdriver'
   gem.add_development_dependency "standardrb"
+  gem.add_development_dependency "sqlite3"
+  gem.add_development_dependency "webpacker"
+  gem.add_development_dependency "webdrivers"
 end

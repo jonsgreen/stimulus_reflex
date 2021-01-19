@@ -24,7 +24,7 @@ require "stimulus_reflex/logger"
 module StimulusReflex
   class Engine < Rails::Engine
     initializer "stimulus_reflex.sanity_check" do
-      SanityChecker.check! unless Rails.env.production?
+      SanityChecker.check! unless Rails.env.production? || ENV['SKIP_SANITY_CHECKER']
     end
   end
 end
